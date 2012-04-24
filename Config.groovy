@@ -123,4 +123,13 @@ grails.plugins.springsecurity.logout.afterLogoutUrl='/'
 // password encoding url
 grails.plugins.springsecurity.password.algorithm = 'SHA'
 
+//Quartz jobs configuration
+//start delay for the sweep job
+com.recomdata.export.jobs.sweep.startDelay=60000 //d*h*m*s*1000
+//repeat interval for the sweep job
+com.recomdata.export.jobs.sweep.repeatInterval= 86400000 //d*h*m*s*1000
+//specify the age of files to be deleted (in days)
+com.recomdata.export.jobs.sweep.fileAge=3
+
+
 
