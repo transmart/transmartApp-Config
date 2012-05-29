@@ -131,5 +131,8 @@ com.recomdata.export.jobs.sweep.repeatInterval= 86400000 //d*h*m*s*1000
 //specify the age of files to be deleted (in days)
 com.recomdata.export.jobs.sweep.fileAge=3
 
+//**************************
+com.recomdata.transmart.data.export.rScriptDirectory='/usr/local/tomcat-6.0.35/webapps/transmart/dataExportRScripts'
+
 
 
