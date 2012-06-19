@@ -37,6 +37,11 @@ com.recomdata.datasetExplorer.hideAcrossTrialsPanel='false'
 // disable sample explorer
 com.recomdata.hideSampleExplorer='false'
 
+//*************************
+//enable genego
+//com.recomdata.searchtool.genegoURL='https://portal.genego.com'
+//**************************
+
 /**********************************
 * configuration for dataset explorer
 **********************************/
