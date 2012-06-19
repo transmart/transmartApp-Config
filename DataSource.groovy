@@ -17,6 +17,21 @@ dataSource {
 	dialect = "org.hibernate.dialect.Oracle10gDialect"
 	// enable this for SQL debugging 
         //loggingSql = true
+         properties {
+           maxActive = 100
+           maxIdle = 25
+           minIdle = 5
+           initialSize =10
+           minEvictableIdleTimeMillis = 60000
+           timeBetweenEvictionRunsMillis = 60000
+           maxWait = 60000
+           numTestsPerEvictionRun=3
+           testOnBorrow=true
+           testWhileIdle=false
+           testOnReturn=false
+           validationQuery = "SELECT 1 FROM DUAL"
+        }
+
 }
 
 
