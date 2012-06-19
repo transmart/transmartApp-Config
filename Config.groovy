@@ -1,4 +1,3 @@
-
 /***
 * transmart Application configuration settings
 * this file will be loaded by the tranSMART application when tomcat is restarted
@@ -30,6 +29,13 @@ com.recomdata.guestAutoLogin='true'
 // This allows tranSMART admin to control the level of accesses a default guest account can have
 // or even disable some features if necessary
 com.recomdata.guestUserName='guest'
+
+// hide internal tabs including doc and jubilant tabs
+com.recomdata.searchtool.hideInternalTabs='false'
+// hide across trial panel
+com.recomdata.datasetExplorer.hideAcrossTrialsPanel='false'
+// disable sample explorer
+com.recomdata.hideSampleExplorer='false'
 
 /**********************************
 * configuration for dataset explorer
