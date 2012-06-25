@@ -145,5 +145,24 @@ com.recomdata.export.jobs.sweep.fileAge=3
 //**************************
 com.recomdata.transmart.data.export.rScriptDirectory='/usr/local/tomcat-6.0.35/webapps/transmart/dataExportRScripts'
 
+log4j = {
+  appenders {
+		// set up a log file in the standard tomcat area; be sure to use .toString() with ${}
+		rollingFile name:'tomcatLog', file:"/usr/local/tomcat-6.0.35/logs/transmart.log".toString(), maxFileSize:'6080KB', layout:pattern(conversionPattern: '[%p] %d{HH:mm:ss} (%c{5}:%M:%L) | %m%n')
+		'null' name:'stacktrace'
+	}
+
+	root {
+		// change the root logger to my tomcatLog file
+		warn 'tomcatLog'
+		additivity = true
+	}
+
+	// example for sending stacktraces to my tomcatLog file
+	info tomcatLog:'StackTrace'
+	info tomcatLog:'grails.app.task', 'grails.app.controller', 'grails.app.service'
+	
+	
+}
 
 
