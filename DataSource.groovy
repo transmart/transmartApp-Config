@@ -9,7 +9,7 @@ dataSource {
 	// standard jdbc driver
 	driverClassName ="oracle.jdbc.driver.OracleDriver"
 	// oracle jdbc url- example here is connecting to an oracle xe instance on localhost 
-        url = "jdbc:oracle:thin:@localhost:1521:xe"
+        url = "jdbc:oracle:thin:@23.23.185.167:1521:pgdev"
 	// user name and password
 	username = "biomart_user"
 	password = "biomart_user"
@@ -17,6 +17,24 @@ dataSource {
 	dialect = "org.hibernate.dialect.Oracle10gDialect"
 	// enable this for SQL debugging 
         //loggingSql = true
+}
+
+dataSource_postgresql {
+
+            driverClassName ="org.postgresql.Driver"         
+
+            url = "jdbc:postgresql://localhost:5432/transmart"             // AWS GPL Database
+
+            username = "biomart_user"
+
+            password = "biomart_user"
+
+            dialect = "org.hibernate.dialect.PostgreSQLDialect"
+
+            //loggingSql = true
+
+            //formatSql = true
+
 }
 
 

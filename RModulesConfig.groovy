@@ -28,7 +28,6 @@ RModules
 		   "Rendering Output"]
 	   
 	   //Configuration for plugins.
-	   //tempFolderDirectory = "C:\\Users\\mmcduffie\\AppData\\Local\\Temp\\jobs\\"
 	   tempFolderDirectory = "/var/tmp/jobs/"
 	   //I use this to do local development. It causes the analysis controller
 	   transferImageFile = true
