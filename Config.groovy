@@ -61,8 +61,7 @@ com.recomdata.view.studyview='studydetail'
 **********************************/
 
 // solr application URL
-//com.recomdata.solr.baseURL = 'http://localhost:8983'
-com.recomdata.solr.baseURL = 'http://localhost:8080'
+com.recomdata.solr.baseURL = 'http://localhost:8983'
 // field list to be indexed from
 com.recomdata.solr.solrFieldList = 'Pathology|Tissue|DataType|DataSet'
 //This must be in alphabetical order for now.

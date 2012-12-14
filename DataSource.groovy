@@ -3,7 +3,7 @@
  * by the tranSMART application when the tomcat is restarted
  */
 
-dataSource {
+/*dataSource {
 	// pooled connection
 	pooled = true
 	// standard jdbc driver
@@ -17,9 +17,9 @@ dataSource {
 	dialect = "org.hibernate.dialect.Oracle10gDialect"
 	// enable this for SQL debugging 
         //loggingSql = true
-}
+}*/
 
-dataSource_postgresql {
+dataSource {
 
             driverClassName ="org.postgresql.Driver"         
 
@@ -32,6 +32,7 @@ dataSource_postgresql {
             dialect = "org.hibernate.dialect.PostgreSQLDialect"
 
             //loggingSql = true
+	    	//logSql = true
 
             //formatSql = true
 
@@ -46,5 +47,7 @@ hibernate {
 	cache.provider_class='org.hibernate.cache.EhCacheProvider'
 	// pool size
 	connection.pool_size=30
+	//format_sql = true
+	//use_sql_comments = true
 }
 
