@@ -6,7 +6,7 @@
 RModules 
 {
 	// plugin script directory
-       pluginScriptDirectory = "/usr/local/tomcat-6.0.35/webapps/transmart/plugins/rdc-rmodules-0.1/Rscripts/"
+       pluginScriptDirectory = "/your/tomcat/webapps/transmart/plugins/rdc-rmodules-0.2/Rscripts/"
 	   defaultStatusList = ["Started",
 			"Validating Cohort Information",
 			"Triggering Data-Export Job",
@@ -32,7 +32,7 @@ RModules
 	   //I use this to do local development. It causes the analysis controller
 	   transferImageFile = true
 	   //This is the system path where we move the image file to so we can serve it.
-	   temporaryImageFolder = "/usr/local/tomcat-6.0.35/webapps/transmart/images/tempImages"
+	   temporaryImageFolder = "/your/tomcat/webapps/transmart/images/tempImages"
 	   //This is the path that we use to render the image.
 	   imageURL = "/transmart/images/tempImages/"
 	   
