@@ -6,7 +6,7 @@ RmodulesConfig.groovy - configuration file for the R plugin module
 these files should be put under this folder:
 ${transmartUser HOME Dir}/.grails/transmartConfig
 for example, if 'appuser' is the user for transmart, the folder should be
-~appuser/.grails/transmartAppConfig
+~appuser/.grails/transmartConfig
 
 NOTE: the name of the configuration directory is determined by the name
 of the application, and the name of the application is set in the file
