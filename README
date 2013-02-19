@@ -4,7 +4,7 @@ DataSource.groovy - jdbc and connection pool configuration
 RmodulesConfig.groovy - configuration file for the R plugin module
 
 these files should be put under this folder:
-${transmartUser HOME Dir}/.grails/transmartAppConfig
+${transmartUser HOME Dir}/.grails/transmartConfig
 for example, if 'appuser' is the user for transmart, the folder should be
-~appuser/.grails/transmartAppConfig
+~appuser/.grails/transmartConfig
 
