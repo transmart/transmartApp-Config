@@ -11,7 +11,7 @@
 // Lucane index location for documentation search - this is a absolute path on your local deployment
 com.recomdata.searchengine.index="/usr/local/tomcat-5.5.27/appdata/transmart/index"
 // contact email address
-com.recomdata.searchtool.contactUs="mailto:transmartGPLsupport@recomdata.com"
+com.recomdata.searchtool.contactUs="mailto:help@transmartfoundation.org"
 // relative context path to dataset explorer url
 com.recomdata.searchtool.datasetExplorerURL="/transmart/datasetExplorer"
 // absolute path to online help system
