@@ -46,7 +46,7 @@ com.recomdata.hideSampleExplorer='false'
 * configuration for dataset explorer
 **********************************/
 // i2b2 project management cell url
-com.recomdata.datasetExplorer.pmServiceURL="/axis2/rest/PMService/"
+com.recomdata.datasetExplorer.pmServiceURL="http://23.23.185.167:9090/i2b2/rest/PMService/"
 // turn proxy on if the pm cell deployed on a different server or not through the apache proxy - this meets the javascript same origin policy
 com.recomdata.datasetExplorer.pmServiceProxy='false'
 // deprecated - leave it as false
@@ -54,9 +54,9 @@ com.recomdata.datasetExplorer.inforsense='false'
 // set to true to enable gene pattern integration 
 com.recomdata.datasetExplorer.genePatternEnabled = 'false'
 // The tomcat URL that gene pattern is deployed within -usually it's proxyed through apache
-com.recomdata.datasetExplorer.genePatternURL='http://23.21.225.70'
+com.recomdata.datasetExplorer.genePatternURL='http://23.23.185.167'
 // Gene Pattern real URL with port number
-com.recomdata.datasetExplorer.genePatternRealURLBehindProxy='http://23.21.225.70:7090'
+com.recomdata.datasetExplorer.genePatternRealURLBehindProxy='http://23.23.185.167:8080'
 // default Gene pattern user to start up - each tranSMART user will need a separate user account to be created in Gene Pattern
 com.recomdata.datasetExplorer.genePatternUser='biomart'
 // temporary image directories for analyses results 
@@ -117,15 +117,15 @@ com.recomdata.plugins.available = ["lineGraph","correlationAnalysis","scatterPlo
 
 // Added by the Spring Security Core plugin:
 // customized user GORM class
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'AuthUser'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.transmart.searchapp.AuthUser'
 // customized password field
 grails.plugins.springsecurity.userLookup.passwordPropertyName = 'passwd'
 // customized user /role join GORM class
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'AuthUser'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.transmart.searchapp.AuthUser'
 // customized role GORM class
-grails.plugins.springsecurity.authority.className = 'Role'
+grails.plugins.springsecurity.authority.className = 'org.transmart.searchapp.Role'
 // request map GORM class name - request map is stored in the db
-grails.plugins.springsecurity.requestMap.className = 'Requestmap'
+grails.plugins.springsecurity.requestMap.className = 'org.transmart.searchapp.Requestmap'
 // requestmap in db
 grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity.SecurityConfigType.Requestmap
 // url to redirect after login in
@@ -149,7 +149,7 @@ com.recomdata.transmart.data.export.rScriptDirectory='/usr/local/tomcat-6.0.35/w
 log4j = {
   appenders {
 		// set up a log file in the standard tomcat area; be sure to use .toString() with ${}
-		rollingFile name:'tomcatLog', file:"/usr/local/tomcat-6.0.35/logs/transmart.log".toString(), maxFileSize:'6080KB', layout:pattern(conversionPattern: '[%p] %d{HH:mm:ss} (%c{5}:%M:%L) | %m%n')
+		rollingFile name:'tomcatLog', file:"/var/log/transmart.log".toString(), maxFileSize:'6080KB', layout:pattern(conversionPattern: '[%p] %d{HH:mm:ss} (%c{5}:%M:%L) | %m%n')
 		'null' name:'stacktrace'
 	}
 
