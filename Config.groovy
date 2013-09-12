@@ -1,4 +1,3 @@
-
 /***
 * transmart Application configuration settings
 * this file will be loaded by the tranSMART application when tomcat is restarted
@@ -12,13 +11,13 @@
 // Lucane index location for documentation search - this is a absolute path on your local deployment
 com.recomdata.searchengine.index="/usr/local/tomcat-6.0.35/appdata/transmart/index"
 // contact email address
-com.recomdata.searchtool.contactUs="mailto:transmartGPLsupport@recomdata.com"
+com.recomdata.searchtool.contactUs="mailto:help@transmartfoundation.org"
 // relative context path to dataset explorer url
 com.recomdata.searchtool.datasetExplorerURL="/transmart/datasetExplorer"
 // absolute path to online help system
-com.recomdata.searchtool.adminHelpURL="http://23.23.185.167/transmart/help/adminHelp/default.htm"
+com.recomdata.searchtool.adminHelpURL="http://23.21.225.70/transmart/help/adminHelp/default.htm"
 // application title 
-com.recomdata.searchtool.appTitle="Search tranSMART (GPL, PostgresSQL Migration)"
+com.recomdata.searchtool.appTitle="Search tranSMART (GPL)"
 // application logo to be used in the login page
 com.recomdata.searchtool.largeLogo="transmartlogo.jpg"
 // application logo to be used in the search page
@@ -31,22 +30,33 @@ com.recomdata.guestAutoLogin='true'
 // or even disable some features if necessary
 com.recomdata.guestUserName='guest'
 
+// hide internal tabs including doc and jubilant tabs
+com.recomdata.searchtool.hideInternalTabs='false'
+// hide across trial panel
+com.recomdata.datasetExplorer.hideAcrossTrialsPanel='false'
+// disable sample explorer
+com.recomdata.hideSampleExplorer='false'
+
+//*************************
+//enable genego
+//com.recomdata.searchtool.genegoURL='https://portal.genego.com'
+//**************************
+
 /**********************************
 * configuration for dataset explorer
 **********************************/
 // i2b2 project management cell url
-com.recomdata.datasetExplorer.pmServiceURL="http://23.23.185.167:9090/i2b2/rest/PMService/"
-// turn proxy on if the pm cell deployed on a different server or not through the apache proxy
-//  - this meets the javascript same origin policy
-com.recomdata.datasetExplorer.pmServiceProxy='true'
+com.recomdata.datasetExplorer.pmServiceURL="/axis2/rest/PMService/"
+// turn proxy on if the pm cell deployed on a different server or not through the apache proxy - this meets the javascript same origin policy
+com.recomdata.datasetExplorer.pmServiceProxy='false'
 // deprecated - leave it as false
 com.recomdata.datasetExplorer.inforsense='false'
 // set to true to enable gene pattern integration 
 com.recomdata.datasetExplorer.genePatternEnabled = 'false'
 // The tomcat URL that gene pattern is deployed within -usually it's proxyed through apache
-com.recomdata.datasetExplorer.genePatternURL='http://23.23.185.167'
+com.recomdata.datasetExplorer.genePatternURL='http://23.21.225.70'
 // Gene Pattern real URL with port number
-com.recomdata.datasetExplorer.genePatternRealURLBehindProxy='http://23.23.185.167:8080'
+com.recomdata.datasetExplorer.genePatternRealURLBehindProxy='http://23.21.225.70:7090'
 // default Gene pattern user to start up - each tranSMART user will need a separate user account to be created in Gene Pattern
 com.recomdata.datasetExplorer.genePatternUser='biomart'
 // temporary image directories for analyses results 
@@ -107,15 +117,15 @@ com.recomdata.plugins.available = ["lineGraph","correlationAnalysis","scatterPlo
 
 // Added by the Spring Security Core plugin:
 // customized user GORM class
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'org.transmart.searchapp.AuthUser'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'AuthUser'
 // customized password field
 grails.plugins.springsecurity.userLookup.passwordPropertyName = 'passwd'
 // customized user /role join GORM class
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'org.transmart.searchapp.AuthUser'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'AuthUser'
 // customized role GORM class
-grails.plugins.springsecurity.authority.className = 'org.transmart.searchapp.Role'
+grails.plugins.springsecurity.authority.className = 'Role'
 // request map GORM class name - request map is stored in the db
-grails.plugins.springsecurity.requestMap.className = 'org.transmart.searchapp.Requestmap'
+grails.plugins.springsecurity.requestMap.className = 'Requestmap'
 // requestmap in db
 grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity.SecurityConfigType.Requestmap
 // url to redirect after login in
@@ -136,5 +146,24 @@ com.recomdata.export.jobs.sweep.fileAge=3
 //**************************
 com.recomdata.transmart.data.export.rScriptDirectory='/usr/local/tomcat-6.0.35/webapps/transmart/dataExportRScripts'
 
+log4j = {
+  appenders {
+		// set up a log file in the standard tomcat area; be sure to use .toString() with ${}
+		rollingFile name:'tomcatLog', file:"/usr/local/tomcat-6.0.35/logs/transmart.log".toString(), maxFileSize:'6080KB', layout:pattern(conversionPattern: '[%p] %d{HH:mm:ss} (%c{5}:%M:%L) | %m%n')
+		'null' name:'stacktrace'
+	}
+
+	root {
+		// change the root logger to my tomcatLog file
+		warn 'tomcatLog'
+		additivity = true
+	}
+
+	// example for sending stacktraces to my tomcatLog file
+	info tomcatLog:'StackTrace'
+	info tomcatLog:'grails.app.task', 'grails.app.controller', 'grails.app.service'
+	
+	
+}
 
 
