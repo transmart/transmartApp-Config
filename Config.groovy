@@ -15,7 +15,7 @@ com.recomdata.searchtool.contactUs="mailto:help@transmartfoundation.org"
 // relative context path to dataset explorer url
 com.recomdata.searchtool.datasetExplorerURL="/transmart/datasetExplorer"
 // absolute path to online help system
-com.recomdata.searchtool.adminHelpURL="http://23.21.225.70/transmart/help/adminHelp/default.htm"
+com.recomdata.searchtool.adminHelpURL="/transmart/help/adminHelp/default.htm"
 // application title 
 com.recomdata.searchtool.appTitle="Search tranSMART (GPL)"
 // application logo to be used in the login page
