@@ -109,7 +109,7 @@ grails.plugin.springsecurity.ldap.context.server = 'ldap://auth.example.com'
 // DN to authenticate with
 grails.plugin.springsecurity.ldap.context.managerDn = 'cn=admin,dc=example,dc=com'
 // Password to authenticate with
-grails.plugin.springsecurity.ldap.context.managerPassword = 'Sihpn9B'
+grails.plugin.springsecurity.ldap.context.managerPassword = 'ChangeMe42'
 // Whether or not integrate internal roles. Blurry notion, documentation missing
 grails.plugin.springsecurity.ldap.context.allowInternaRoles = 'false'
 // Context name to search in, relative to the base of the configured ContextSource, e.g. 'dc=example,dc=com', 'ou=users,dc=example,dc=com'
