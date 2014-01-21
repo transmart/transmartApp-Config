@@ -8,6 +8,8 @@
 * general configuration items
 *************************/
 
+// Default langing page
+com.recomdata.defaults.landing = "/datasetExplorer"
 // Email address of the administrator to contact
 com.recomdata.administrator="admin@example.com"
 // Password strength criteria, please change description accordingly
@@ -135,7 +137,9 @@ grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/userLanding'
 // customized password field. CAUTION WITH LDAP !
 grails.plugin.springsecurity.userLookup.passwordPropertyName = 'passwd'
 // password encoding url. CAUTION WITH LDAP !
-grails.plugin.springsecurity.password.algorithm = 'SHA'
+grails.plugin.springsecurity.password.algorithm = 'SHA-1'
+// we should force weak hash iteration to comply with existing account. CAUTION WITH LDAP !
+grails.plugin.springsecurity.password.hash.iterations = 1
 
 
 /**********************************************
