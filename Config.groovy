@@ -38,9 +38,9 @@ com.recomdata.searchtool.adminHelpURL="/transmart/help/adminHelp/default.htm"
 // application title
 com.recomdata.searchtool.appTitle="Search tranSMART (GPL, PostgresSQL Migration)"
 // application logo to be used in the login page
-com.recomdata.searchtool.largeLogo="transmartlogo.jpg"
+com.recomdata.largeLogo="transmartlogo.jpg"
 // application logo to be used in the search page
-com.recomdata.searchtool.smallLogo="transmartlogosmall.jpg"
+com.recomdata.smallLogo="transmartlogosmall.jpg"
 // set to true to enable guest auto login.If it's enabled no login is required to access tranSMART.
 com.recomdata.guestAutoLogin='false'
 // default guest account user name - tranSMART will load this user as the "guest" user account
