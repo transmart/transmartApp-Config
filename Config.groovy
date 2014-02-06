@@ -213,3 +213,10 @@ log4j = {
 		additivity = true
 	}
 }
+
+
+/**********************************************
+ * advising transmart for configuration completion
+***********************************************/
+
+org.transmart.configFine = true
