@@ -34,7 +34,7 @@ com.recomdata.searchtool.contactUs="mailto:support@example.com"
 // relative context path to dataset explorer url
 com.recomdata.searchtool.datasetExplorerURL="/transmart/datasetExplorer"
 // absolute path to online help system
-com.recomdata.searchtool.adminHelpURL="/transmart/help/adminHelp/default.htm"
+com.recomdata.adminHelpURL="/transmart/help/adminHelp/default.htm"
 // application title
 com.recomdata.searchtool.appTitle="Search tranSMART (GPL, PostgresSQL Migration)"
 // application logo to be used in the login page
