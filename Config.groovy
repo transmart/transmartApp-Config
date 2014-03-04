@@ -8,7 +8,7 @@
 * general configuration items
 *************************/
 
-// Default langing page
+// Default landing page
 com.recomdata.defaults.landing = "/datasetExplorer"
 // Email address of the administrator to contact
 com.recomdata.administrator="admin@example.com"
@@ -27,7 +27,7 @@ com.recomdata.hideSampleExplorer='false'
 * configuration for search
 *************************/
 
-// Lucane index location for documentation search - this is a absolute path on your local deployment
+// Lucene index location for documentation search - this is a absolute path on your local deployment
 com.recomdata.searchengine.index="/transmart/index"
 // contact email address
 com.recomdata.searchtool.contactUs="mailto:support@example.com"
@@ -117,7 +117,7 @@ grails.plugin.springsecurity.ldap.context.allowInternaRoles = 'false'
 // Context name to search in, relative to the base of the configured ContextSource, e.g. 'dc=example,dc=com', 'ou=users,dc=example,dc=com'
 grails.plugin.springsecurity.ldap.search.base = 'ou=Users,dc=example,dc=com'
 // The filter expression used in the user search
-grails.plugin.springsecurity.ldap.search.fliter = '(uid={0})'
+grails.plugin.springsecurity.ldap.search.filter = '(uid={0})'
 // Names of attribute ids to return; use null to return all and an empty list to return none
 grails.plugin.springsecurity.ldap.authenticator.attributesToReturn = ['uid', 'mail', 'cn']
 // The base DN from which the search for group membership should be performed
@@ -183,7 +183,7 @@ com.rwg.solr.path = '/solr-rwg/select/'
 
 
 /**********************************************
- * configuration for Logger
+* configuration for Logger
 ***********************************************/
 
 log4j = {
