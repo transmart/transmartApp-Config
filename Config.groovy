@@ -179,6 +179,14 @@ com.rwg.solr.path = '/solr-rwg/select/'
 
 
 /**********************************************
+ * configuration for Galaxy and Metacore
+***********************************************/
+com.thomsonreuters.transmart.metacoreAnalyticsEnable = true
+
+com.galaxy.blend4j.galaxyEnabled = false
+com.galaxy.blend4j.galaxyURL = "http://localhost:8081"
+
+/**********************************************
  * configuration for Logger
 ***********************************************/
 
