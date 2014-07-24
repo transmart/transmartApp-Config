@@ -25,7 +25,7 @@ com.recomdata.hideSampleExplorer='false'
 * configuration for search
 *************************/
 
-// Lucane index location for documentation search - this is a absolute path on your local deployment
+// Lucene index location for documentation search - this is a absolute path on your local deployment
 com.recomdata.searchengine.index="/transmart/index"
 // contact email address
 com.recomdata.searchtool.contactUs="mailto:support@example.com"
@@ -34,12 +34,12 @@ com.recomdata.searchtool.datasetExplorerURL="/transmart/datasetExplorer"
 // absolute path to online help system
 com.recomdata.searchtool.adminHelpURL="/transmart/help/adminHelp/default.htm"
 // application title
-com.recomdata.searchtool.appTitle="Search tranSMART (GPL, PostgresSQL Migration)"
+com.recomdata.searchtool.appTitle="Search tranSMART (GPL, PostgreSQL Migration)"
 // application logo to be used in the login page
 com.recomdata.searchtool.largeLogo="transmartlogo.jpg"
 // application logo to be used in the search page
 com.recomdata.searchtool.smallLogo="transmartlogosmall.jpg"
-// set to true to enable guest auto login.If it's enabled no login is required to access tranSMART.
+// set to true to enable guest auto login.  If it's enabled no login is required to access tranSMART.
 com.recomdata.guestAutoLogin='false'
 // default guest account user name - tranSMART will load this user as the "guest" user account
 // This allows tranSMART admin to control the level of accesses a default guest account can have
@@ -62,7 +62,7 @@ com.recomdata.datasetExplorer.pmServiceProxy='true'
 com.recomdata.datasetExplorer.inforsense='false'
 // set to true to enable gene pattern integration
 com.recomdata.datasetExplorer.genePatternEnabled = 'false'
-// The tomcat URL that gene pattern is deployed within -usually it's proxyed through apache
+// The tomcat URL that gene pattern is deployed within -usually it's proxied through apache
 com.recomdata.datasetExplorer.genePatternURL='http://127.0.0.1'
 // Gene Pattern real URL with port number
 com.recomdata.datasetExplorer.genePatternRealURLBehindProxy='http://127.0.0.1:8080'
@@ -79,7 +79,7 @@ com.recomdata.view.studyview='studydetail'
 * configuration for SolR
 **********************************/
 
-// solr application URL
+// SOLR application URL
 com.recomdata.solr.baseURL = 'http://127.0.0.1:8983'
 // field list to be indexed from
 com.recomdata.solr.solrFieldList = 'Pathology|Tissue|DataType|DataSet'
@@ -106,7 +106,7 @@ com.recomdata.solr.numberOfSuggestions = 20
 
 // Address of the LDAP server
 grails.plugin.springsecurity.ldap.context.server = 'ldap://auth.example.com'
-// DN to authenticate with
+// Distinguished Name (DN) to authenticate with
 grails.plugin.springsecurity.ldap.context.managerDn = 'cn=admin,dc=example,dc=com'
 // Password to authenticate with
 grails.plugin.springsecurity.ldap.context.managerPassword = 'ChangeMe42'
@@ -115,7 +115,7 @@ grails.plugin.springsecurity.ldap.context.allowInternaRoles = 'false'
 // Context name to search in, relative to the base of the configured ContextSource, e.g. 'dc=example,dc=com', 'ou=users,dc=example,dc=com'
 grails.plugin.springsecurity.ldap.search.base = 'ou=Users,dc=example,dc=com'
 // The filter expression used in the user search
-grails.plugin.springsecurity.ldap.search.fliter = '(uid={0})'
+grails.plugin.springsecurity.ldap.search.filter = '(uid={0})'
 // Names of attribute ids to return; use null to return all and an empty list to return none
 grails.plugin.springsecurity.ldap.authenticator.attributesToReturn = ['uid', 'mail', 'cn']
 // The base DN from which the search for group membership should be performed
